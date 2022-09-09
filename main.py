@@ -1,5 +1,7 @@
 from typing_extensions import Self
 
+from pytest import Class
+
 
 class Vehiculo():
     def __init__(self, color, ruedas):
@@ -10,7 +12,7 @@ def __str__(self):
 
 class Coche(Vehiculo):
     def __init__(self, color, ruedas, velocidad, cilindrada): Vehiculo.__init__(self, color, ruedas)
-        Self.velocidad = velocidad
+        self.velocidad = velocidad
         self.cilindrada = cilindrada
 
     def __str__(self):
